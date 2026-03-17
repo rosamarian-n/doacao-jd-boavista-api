@@ -1,0 +1,16 @@
+﻿version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - uploads_data:/app/uploads
+    environment:
+      - DATABASE_URL=sqlite:///./app/database.db
+      - SECRET_KEY=desenvolvimento_mude_isso_em_producao
+
+volumes:
+  uploads_data:
