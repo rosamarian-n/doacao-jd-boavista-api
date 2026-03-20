@@ -9,7 +9,7 @@ from app import models, schemas
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="TrocaTroca API",
+    title=" Doação Jd Boa Vista API",
     description="API para doação de itens - Conectando doadores e interessados",
     version="0.2.0"
 )
@@ -23,7 +23,7 @@ def get_db():
 
 @app.get("/")
 async def root():
-    return {"message": "Bem-vindo à TrocaTroca API", "status": "online"}
+    return {"message": "Bem-vindo à Doação Jd Boa Vista", "status": "online"}
 
 @app.get("/health")
 async def health_check():
