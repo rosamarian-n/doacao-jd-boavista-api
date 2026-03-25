@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itens para Doação - Doações JD Boavista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Doações JD Boavista</h1>
+        <nav>
+            <a href="index.html" id="nav-doadores">Doadores</a>
+            <a href="items.html" id="nav-itens" class="active">Itens</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="actions">
+            <button id="btn-anunciar" class="btn-primary">Anunciar Doação</button>
+        </section>
+
+        <section class="filters">
+            <label for="filter-categoria">Categoria:</label>
+            <select id="filter-categoria">
+                <option value="">Todas</option>
+                <option value="Roupas">Roupas</option>
+                <option value="Alimentos">Alimentos</option>
+                <option value="Móveis">Móveis</option>
+                <option value="Eletrônicos">Eletrônicos</option>
+                <option value="Livros">Livros</option>
+                <option value="Outros">Outros</option>
+            </select>
+
+            <label for="filter-condicao">Condição:</label>
+            <select id="filter-condicao">
+                <option value="">Todas</option>
+                <option value="novo">Novo</option>
+                <option value="usado">Usado</option>
+            </select>
+        </section>
+
+        <section class="items-list" id="items-list"></section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Anunciar Doação</h2>
+            <form id="form-anuncio">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" required></textarea>
+
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" required>
+                    <option value="Roupas">Roupas</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Móveis">Móveis</option>
+                    <option value="Eletrônicos">Eletrônicos</option>
+                    <option value="Livros">Livros</option>
+                    <option value="Outros">Outros</option>
+                </select>
+
+                <label for="condicao">Condição:</label>
+                <select id="condicao" required>
+                    <option value="novo">Novo</option>
+                    <option value="usado">Usado</option>
+                </select>
+
+                <button type="submit" class="btn-primary">Criar Anúncio</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
